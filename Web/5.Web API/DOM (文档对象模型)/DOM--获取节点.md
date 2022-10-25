@@ -9,8 +9,8 @@
 - [`document.getElementsByTagName()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/getElementsByTagName)：返回具有给定 **元素名** 的元素列表 (HTMLCollection 类数组)；
 - [`document.getElementsByClassName()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/getElementsByClassName)：返回 具有给定 **类名** 的 元素列表。
 - [`document.getElementsByName()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/getElementsByTagName)：返回具有给定 **`name`属性值** 的元素列表 (HTMLCollection 类数组)；
-- [`Document.querySelector()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelector)：返回文档中 与指定的CSS选择器匹配的 第一个元素节点。
-- [`Document.querySelectorAll()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll)：返回文档中 与指定的CSS选择器匹配的 所有元素节点的 列表；
+- [`Document.querySelector()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelector)：返回文档中 与指定的 **CSS选择器** 匹配的 第一个元素节点。
+- [`Document.querySelectorAll()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll)：返回文档中 与指定的 **CSS选择器** 匹配的 所有元素节点的 列表；
 
 
 
@@ -43,7 +43,7 @@
 - [`nodeName`](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/nodeName)：获取当前节点的节点名称；
 - [`nodeValue`](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/nodeValue)：返回或设置当前节点的值。
 - [`nodeType`](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/nodeType)：表示的是该节点的类型，是一个数字；只读；
-- [`textContent`](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent)：表示一个节点及其后代的文本内容。
+- [`textContent`](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent)：表示 一个节点及其后代的 **文本内容**。
 
 
 
@@ -63,6 +63,32 @@
 - [`attributes`](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/attributes)：返回该元素所有属性节点的一个实时集合；
 - [`tagName`](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/tagName)：返回当前元素的标签名；
 - [`className`](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/className)：获取或设置指定元素的 class 属性的值。
+
+
+
+- [`element.innerHTML`](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/innerHTML)：设置或获取 HTML语法表示的元素的 后代。
+
+- [`HTMLElement.innerText`](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/innerText)：表示 一个节点及其后代的 **“渲染”文本内容**；
+
+  - `innerText` 可操作已被渲染的内容，而 `textContent` 则不会。
+
+  ```javascript
+  <div class="div1">
+      <p>Lorem ipsum dolor sit.</p>
+  	<style>
+          .div1 {
+              color: blue;
+          }
+  	</style>
+  	<p style="display: none"></p>
+  </div>
+  ```
+
+  ![image-20221009154625016](.image/2.DOM--获取节点/image-20221009154625016.png)
+
+
+
+
 
 
 
